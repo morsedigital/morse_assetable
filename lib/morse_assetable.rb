@@ -84,7 +84,7 @@ module MorseAssetable # rubocop:disable Metrics/ModuleLength
       send("#{name}=", a)
       send("#{n}=", nil)
     else
-      errors.add(thing, a.errors.full_messages.join(','))
+      errors.add(name, a.errors.full_messages.join(','))
       false
     end
   end
