@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{ An easy way to handle submissions to carrierwave from a form }
   spec.description   = %q{ An easy way to handle submissions to carrierwave from a form }
-  spec.homepage      = ''
+  spec.homepage      = 'https://github.com/morsedigital/morse_assetable.git'
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
