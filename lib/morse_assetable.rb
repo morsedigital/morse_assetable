@@ -14,8 +14,11 @@ module MorseAssetable # rubocop:disable Metrics/ModuleLength
       end
     end
 
-    validate :process_attachments
-    validate :process_multiple_attachments
+    validate :process_attachments, unless: :new_record?
+    validate :process_multiple_attachments, unless: :new_record?
+
+    after_save :process_attachments, if: :new_record?
+    after_save :process_multiple_attachments, if: :new_record?
   end
 
   # ClassMethods
