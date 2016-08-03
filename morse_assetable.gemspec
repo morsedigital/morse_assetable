@@ -6,9 +6,8 @@ require 'morse_assetable/version'
 Gem::Specification.new do |spec|
   spec.name          = "morse_assetable"
   spec.version       = MorseAssetable::VERSION
-  spec.authors       = ["Terry S"]
-  spec.email         = ["itsterry@gmail.com"]
-
+  spec.authors       = ["Terry S", 'Fred Mac']
+  spec.email         = ["itsterry@gmail.com", 'freddymcgroarty@gmail.com']
   spec.summary       = %q{ An easy way to handle submissions to carrierwave from a form }
   spec.description   = %q{ An easy way to handle submissions to carrierwave from a form }
   spec.homepage      = 'https://github.com/morsedigital/morse_assetable.git'
