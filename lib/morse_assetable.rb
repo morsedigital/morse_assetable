@@ -11,15 +11,15 @@ module MorseAssetableViewHelpers
 
   def multiple_assets(i, f)
     render partial: 'cms/assets/partials/assets',
-           locals: { assets: i.assets,
+           locals: { assets: i.assets3,
                      f: f }
   end
 
-  def nice_asset(a, thumb = :thumb197x197)
+  def nice_asset(a, version = nil)
     return unless a && a.attachment
-    return image_tag('pdf-logo', size: '197x197') if a.pdf?
-    image_url = a.attachment.images.send(thumb).url
-    image_tag image_url, alt: a.alt if thumb
+    image_url = a.attachment.url
+    image_url = a.attachment.versions[version].url if version
+    image_tag image_url, alt: a.alt
   end
 end
 # MorseAssetable
