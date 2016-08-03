@@ -1,5 +1,27 @@
 require "morse_assetable/version"
+module MorseAssetableViewHelpers
+  def asset_input(f, i, bn = nil)
+    return multiple_assets(i, f) unless bn
+    asset = i.send(bn)
+    render partial: 'cms/assets/partials/asset',
+           locals: { asset: asset,
+                     base_name: bn,
+                     f: f }
+  end
 
+  def multiple_assets(i, f)
+    render partial: 'cms/assets/partials/assets',
+           locals: { assets: i.assets,
+                     f: f }
+  end
+
+  def nice_asset(a, thumb = :thumb197x197)
+    return unless a && a.attachment
+    return image_tag('pdf-logo', size: '197x197') if a.pdf?
+    image_url = a.attachment.images.send(thumb).url
+    image_tag image_url, alt: a.alt if thumb
+  end
+end
 # MorseAssetable
 module MorseAssetable # rubocop:disable Metrics/ModuleLength
   extend ActiveSupport::Concern
