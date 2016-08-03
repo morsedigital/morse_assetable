@@ -11,7 +11,7 @@ module MorseAssetableViewHelpers
 
   def multiple_assets(i, f)
     render partial: 'cms/assets/partials/assets',
-           locals: { assets: i.assets3,
+           locals: { assets: i.assets,
                      f: f }
   end
 
