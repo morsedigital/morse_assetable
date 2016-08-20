@@ -1,5 +1,5 @@
 # MorseAssetable
-
+# todo include views 
 ## AR Helpers
 @Terry 
 my implementation of assetable is better because we 
