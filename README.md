@@ -2,16 +2,16 @@
 
 ## AR Helpers
 
-Add this line to model with assets:
+<!--Add this line to model with assets:-->
 
-```ruby
-include MorseAssetable::ModelHelpers
-set_assetables(:asset, :large_image_one)
-```
+<!--```ruby-->
+<!--include MorseAssetable::ModelHelpers-->
+<!--set_assetables(:asset, :large_image_one)-->
+<!--```-->
 
-'set_assetables' allows you to specify the attributes which the model will belong to. e.g. ensure an attribute called 'large_image_one_id' exists on the model. Assetable will add the association. 
+<!--'set_assetables' allows you to specify the attributes which the model will belong to. e.g. ensure an attribute called 'large_image_one_id' exists on the model. Assetable will add the association. -->
 
-'Assetable automatically assumes a has_many relationship with the asset model. No configuration (i.e 'set_assetables') is required.
+<!--'Assetable automatically assumes a has_many relationship with the asset model. No configuration (i.e 'set_assetables') is required.-->
 
 ## View Helpers
 
