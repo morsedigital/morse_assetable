@@ -1,7 +1,10 @@
 # MorseAssetable
 
 ## AR Helpers
-
+@Terry 
+my implementation of assetable is better because we 
+1) include the assetable module at application record level
+2) use my nicer api 'set_assetables' rather than defining methods.
 <!--Add this line to model with assets:-->
 
 <!--```ruby-->
